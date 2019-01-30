@@ -21,3 +21,8 @@ Route::get('/help', function(){
 })->name('help');
 
 // Voeg hier je eigen routes toe
+Route::get('/link-toevoegen', 'LinksController@index')
+    ->name('form');
+
+Route::post('/link-opslaan', 'LinksController@showLinksForm')
+    ->name('handle');
